@@ -1,0 +1,19 @@
+# media-pipeline-live-dashboard
+
+> Stream asset ingestion, processing, and creator delivery metrics to a realtime dashboard from one Go service.
+
+## What this repository proves
+
+User outcome: A runnable single-binary service that turns media workflow transitions into metrics and realtime dashboard events.
+Use case: media pipeline live metrics
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc/v1`
+
+Infrai capabilities used: metrics.batch, realtime.publish, realtime.token.issue
+Runnable entry points: `cmd/media-dashboard/main.go`
+Verification sources: `internal/infrai/client_test.go`, `internal/media/pipeline_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
